@@ -9,6 +9,7 @@
             background-color: #FFB6C1; /* Světle růžová barva */
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -18,9 +19,28 @@
             color: #333; /* Barva textu pro nadpis */
             font-size: 36px;
         }
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            width: 300px; /* Nastavení velikosti obrázku */
+            height: auto;
+        }
+        .description {
+            font-size: 18px;
+            margin-top: 10px;
+            color: #333;
+        }
     </style>
 </head>
 <body>
     <h1>MOJE MAKEUP RUTINA</h1>
+
+    <!-- Obrázek a popis -->
+    <div class="image-container">
+        <img src="https://www.sephora.cz/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw33d25fb3/images/hi-res/SKU/SKU_3226/566100_swatch.jpg?sw=585&sh=585&sm=fit" alt="Milk Primer">
+        <p class="description">1) Začínám primerem od Milku</p>
+    </div>
 </body>
 </html>
