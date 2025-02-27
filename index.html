@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="cs">
 <head>
     <meta charset="UTF-8">
@@ -12,60 +12,65 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
-            background-image: radial-gradient(circle, rgba(255, 215, 0, 0.5) 1px, transparent 1px);
-            background-size: 20px 20px; /* Velikost zlatých hvězdiček */
+            background-image: url('stars.png'); /* Tady vlož cestu k tvému obrázku hvězdiček */
+            background-size: 50px 50px; /* Velikost hvězdiček */
+            background-repeat: repeat; /* Opakování po celé stránce */
+            padding: 20px;
+            box-sizing: border-box;
         }
         h1 {
-            color: #333; /* Barva textu pro nadpis */
+            color: #333;
             font-size: 36px;
+            margin: 10px 0;
         }
         .subheading {
-            font-size: 24px; /* Velikost textu pro "FACE" */
+            font-size: 24px;
             color: #333;
-            margin-top: 10px;
+            margin: 10px 0 20px;
         }
         .image-container {
-            display: grid; /* Použití grid pro rozdělení obrázků do sloupců */
-            grid-template-columns: repeat(3, 300px); /* 3 sloupce s šířkou 300px */
-            gap: 20px; /* Mezera mezi obrázky */
-            margin-top: 20px;
-            justify-items: center; /* Zarovnání obrázků na střed */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            width: 100%;
+            justify-items: center;
+        }
+        .image-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
         img {
-            width: 300px; /* Nastavení stejné šířky pro všechny obrázky */
-            height: 300px; /* Nastavení stejné výšky pro všechny obrázky */
-            object-fit: cover; /* Upraví obrázek tak, aby vyplnil celý prostor bez deformace */
-            background-color: transparent; /* Zajištění, že obrázky nemají bílé pozadí */
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
         }
         .description {
-            font-size: 18px;
             margin-top: 10px;
+            font-size: 16px;
             color: #333;
-            text-align: center;
+            max-width: 280px;
         }
     </style>
 </head>
 <body>
     <h1>MOJE MAKEUP RUTINA</h1>
-    <p class="subheading">FACE</p> <!-- Přidaný text "FACE" -->
-    
-    <!-- Obrázky a popisy -->
+    <p class="subheading">FACE</p>
+
     <div class="image-container">
-        <!-- První obrázek s popisem -->
         <div class="image-item">
             <img src="https://www.sephora.cz/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw33d25fb3/images/hi-res/SKU/SKU_3226/566100_swatch.jpg?sw=585&sh=585&sm=fit" alt="Milk Primer">
             <p class="description">1) Začínám primerem od Milku</p>
         </div>
-        
-        <!-- Druhý obrázek s popisem -->
         <div class="image-item">
             <img src="https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/americas/us/face-makeup/concealer/fit-me-concealer/maybelline-fit-me-concealer-15-light-041554247718-c.jpg?rev=381f5bd7ffa44d9d9bdb2a6ec0f2d3a9" alt="FIT me concealer">
             <p class="description">2) Jako další používám FIT me concealer od Maybelline v odstínu 22</p>
         </div>
-
-        <!-- Třetí obrázek s popisem -->
         <div class="image-item">
             <img src="https://m.media-amazon.com/images/I/818Z4AUfpcL.jpg" alt="Too Faced Blush">
             <p class="description">3) Jako další používám blush od Too Faced v odstínu WATERMELON RAIN</p>
