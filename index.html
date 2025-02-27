@@ -25,8 +25,13 @@
             margin-top: 10px;
         }
         .image-container {
-            text-align: center;
+            display: flex; /* Flexbox pro umístění obrázků vedle sebe */
+            justify-content: center;
             margin-top: 20px;
+        }
+        .image-item {
+            margin: 0 20px; /* Mezera mezi obrázky */
+            text-align: center;
         }
         img {
             width: 300px; /* Nastavení velikosti obrázku */
@@ -43,10 +48,19 @@
     <h1>MOJE MAKEUP RUTINA</h1>
     <p class="subheading">FACE</p> <!-- Přidaný text "FACE" -->
     
-    <!-- Obrázek a popis -->
+    <!-- Obrázky a popisy -->
     <div class="image-container">
-        <img src="https://www.sephora.cz/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw33d25fb3/images/hi-res/SKU/SKU_3226/566100_swatch.jpg?sw=585&sh=585&sm=fit" alt="Milk Primer">
-        <p class="description">1) Začínám primerem od Milku</p>
+        <!-- První obrázek s popisem -->
+        <div class="image-item">
+            <img src="https://www.sephora.cz/dw/image/v2/BCVW_PRD/on/demandware.static/-/Sites-masterCatalog_Sephora/default/dw33d25fb3/images/hi-res/SKU/SKU_3226/566100_swatch.jpg?sw=585&sh=585&sm=fit" alt="Milk Primer">
+            <p class="description">1) Začínám primerem od Milku</p>
+        </div>
+        
+        <!-- Druhý obrázek s popisem -->
+        <div class="image-item">
+            <img src="https://www.maybelline.com/-/media/project/loreal/brand-sites/mny/americas/us/face-makeup/concealer/fit-me-concealer/maybelline-fit-me-concealer-15-light-041554247718-c.jpg?rev=381f5bd7ffa44d9d9bdb2a6ec0f2d3a9" alt="FIT me concealer">
+            <p class="description">2) Jako další používám FIT me concealer od Maybelline v odstínu 22</p>
+        </div>
     </div>
 </body>
 </html>
