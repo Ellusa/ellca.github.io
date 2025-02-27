@@ -34,8 +34,10 @@
             text-align: center;
         }
         img {
-            width: 300px; /* Nastavení velikosti obrázku */
-            height: auto;
+            width: 300px; /* Nastavení stejné šířky pro oba obrázky */
+            height: 300px; /* Nastavení stejné výšky pro oba obrázky */
+            object-fit: cover; /* Upraví obrázek tak, aby vyplnil celý prostor bez deformace */
+            background-color: transparent; /* Zajištění, že obrázky nemají bílé pozadí */
         }
         .description {
             font-size: 18px;
