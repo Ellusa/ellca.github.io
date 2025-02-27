@@ -14,8 +14,8 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            background-image: radial-gradient(circle, rgba(255, 215, 0, 0.2) 20%, rgba(255, 215, 0, 0) 40%);
-            background-size: 30px 30px;
+            background-image: radial-gradient(circle, rgba(255, 215, 0, 0.5) 1px, transparent 1px);
+            background-size: 20px 20px; /* Velikost zlatých hvězdiček */
         }
         h1 {
             color: #333; /* Barva textu pro nadpis */
@@ -27,17 +27,15 @@
             margin-top: 10px;
         }
         .image-container {
-            display: flex; /* Flexbox pro umístění obrázků vedle sebe */
-            justify-content: center;
+            display: grid; /* Použití grid pro rozdělení obrázků do sloupců */
+            grid-template-columns: repeat(3, 300px); /* 3 sloupce s šířkou 300px */
+            gap: 20px; /* Mezera mezi obrázky */
             margin-top: 20px;
-        }
-        .image-item {
-            margin: 0 20px; /* Mezera mezi obrázky */
-            text-align: center;
+            justify-items: center; /* Zarovnání obrázků na střed */
         }
         img {
-            width: 300px; /* Nastavení stejné šířky pro oba obrázky */
-            height: 300px; /* Nastavení stejné výšky pro oba obrázky */
+            width: 300px; /* Nastavení stejné šířky pro všechny obrázky */
+            height: 300px; /* Nastavení stejné výšky pro všechny obrázky */
             object-fit: cover; /* Upraví obrázek tak, aby vyplnil celý prostor bez deformace */
             background-color: transparent; /* Zajištění, že obrázky nemají bílé pozadí */
         }
@@ -45,6 +43,7 @@
             font-size: 18px;
             margin-top: 10px;
             color: #333;
+            text-align: center;
         }
     </style>
 </head>
